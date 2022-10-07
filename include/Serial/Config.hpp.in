@@ -1,0 +1,21 @@
+#pragma once
+
+namespace serial {
+namespace config {
+namespace version {
+// clang-format off
+//! CMake MAJOR version number
+constexpr unsigned major = @PROJECT_VERSION_MAJOR@;
+
+//! CMake MINOR version number
+constexpr unsigned minor = @PROJECT_VERSION_MINOR@;
+
+//! CMake PATCH version number
+constexpr unsigned patch = @PROJECT_VERSION_PATCH@;
+// clang-format on
+
+//! CMake version number (MAJOR.MINOR.PATCH)
+constexpr char[] str = "@PROJECT_VERSION@";
+} // namespace version
+} // namespace config
+} // namespace serial

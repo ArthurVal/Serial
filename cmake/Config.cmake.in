@@ -4,10 +4,6 @@ include(CMakeFindDependencyMacro)
 
 set(_@PROJECT_NAME@_supported_components Main)
 
-if(@HSMInterface_ENABLE_TANGO@)
-  list(APPEND _@PROJECT_NAME@_supported_components Tango)
-endif()
-
 set(@PROJECT_NAME@_NOT_FOUND_MESSAGE "Unsupported component(s): ")
 
 if(NOT @PROJECT_NAME@_FIND_COMPONENTS)

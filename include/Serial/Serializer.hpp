@@ -98,7 +98,7 @@ auto PromoteToSerialArg(T&& arg) -> decltype(auto) {
  * `.AdvanceTo(OutputIt)`, we serialize ALL inputs argument given into this
  * context.
  * Serialization happens by default constructing a given serializer of type
- * ::hsm::serial::Serializer<T>{}, for an argument of type T, and then calling
+ * ::serial::Serializer<T>{}, for an argument of type T, and then calling
  * the serializer `.Serialize(ctx, arg) -> OutputIt` function.
  * Then the returned iterator is forwarded to the OutputContext throught the
  * `.AdvanceTo(OutputIt)` method on the context.
@@ -177,4 +177,4 @@ constexpr auto SerializeInto(OutputIt d_first, T&&... args) -> OutputIt {
   return ctx.Output();
 }
 
-}  // namespace hsm::serial
+}  // namespace serial

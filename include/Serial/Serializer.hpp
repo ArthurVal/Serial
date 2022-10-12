@@ -61,6 +61,7 @@ constexpr auto ForwardAsSerialArg(T&& arg, U&& serializer)
   return SerialArg<T&&, U&&>{std::forward<T>(arg), std::forward<U>(serializer)};
 }
 
+/// Contains traits/meta functions
 namespace traits {
 
 template <class T>
